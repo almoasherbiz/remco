@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_other_info" model="ir.ui.view">
+            <field name="name">view.partner.form.other.info</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name="other_info" string="Other Info">
+                        <group>
+                            <group>
+                                <field name="counter_paid"/>
+                                <field name="payment_date" attrs="{'invisible': [('counter_paid','=', False)]}"/>
+                                <field name="receipt_number" attrs="{'invisible': [('counter_paid','=', False)]}"/>
+                                <field name="unit_space"/>
+                                <field name="garden_space"/>
+                                <field name="roof_space"/>
+                            </group>
+                            <group>
+                                <field name="unit_receipt_date"/>
+                                <field name="deposit_payment_date"/>
+                                <field name="deposit_amount"/>
+                                <field name="notes_1"/>
+                                <field name="notes_2"/>
+                                <field name="notes_3"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

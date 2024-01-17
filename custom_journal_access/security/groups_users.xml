@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+         <record id="journal_entry_post_access" model="res.groups">
+            <field name="name">	Journal Entry Post Access</field>
+        </record>
+
+        <record id="journal_entry_reserve_access" model="res.groups">
+            <field name="name">	Journal Entry Reverse Access</field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <template id="remco_template_partner_ledger_report" inherit_id="account_reports.line_template_partner_ledger_report" primary="True">
+        <xpath expr="//span[hasclass('account_report_line_name')]" position="inside">
+<!--            <span t-esc="line.get('owner_name')"/>-->
+            <a t-att-data-line_id="line.get('id')" action="action_partner_reconcile" class="no_print oe_link_reports">Reconcile</a>
+        </xpath>
+    </template>
+    </data>
+</odoo>
+
+

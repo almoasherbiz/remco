@@ -1,0 +1,14 @@
+<odoo>
+    <record id="account_reports.partner_ledger_report" model="account.report">
+
+        <field name="column_ids">
+            <record id="partner_ledger_report_owner" model="account.report.column">
+                <field name="name">Owner</field>
+                <field name="expression_label">account_owner</field>
+                <field name="figure_type">none</field>
+            </record>
+
+        </field>
+    </record>
+
+</odoo>

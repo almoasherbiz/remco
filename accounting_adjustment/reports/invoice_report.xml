@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="owner_name_invoice_report" inherit_id="account.report_invoice_document">
+            <xpath expr="//table[@name='invoice_line_table']" position="before">
+            <div t-if="o.owner_name">
+                <strong>Owner Name:</strong>
+                <span t-field="o.owner_name" />
+            </div>
+                <br>
+
+                </br>
+                <div t-if="o.village_name">
+                <strong>Village Name:</strong>
+                <span t-field="o.village_name" />
+            </div>
+                <br>
+
+                </br>
+                <br>
+
+                </br>
+            </xpath>
+<!--            <xpath expr="//div[hasclass('page')]" position="before">-->
+<!--                <div t-if="o.owner_name">-->
+<!--                                <strong>Owner Name:</strong>-->
+<!--                                <span t-field="o.owner_name" />-->
+<!--                            </div>-->
+<!--                                <br>-->
+
+<!--                                </br>-->
+<!--                                <div t-if="o.village_name">-->
+<!--                                <strong>Village Name:</strong>-->
+<!--                                <span t-field="o.village_name" />-->
+<!--                            </div>-->
+<!--            </xpath>-->
+<!--&lt;!&ndash;            <xpath expr="//div[hasclass('row')]//div[@name='no_shipping']//t[@t-set='address']" position="after">&ndash;&gt;-->
+<!--                <span >-->
+<!--                    <strong>Owner Name:</strong>-->
+<!--                    <span t-field="o.owner_name" />-->
+<!--                    <br>-->
+
+<!--                    </br>-->
+<!--                    <strong>Village Name:</strong>-->
+<!--                    <span t-field="o.village_name" />-->
+<!--                </span>-->
+<!--            </xpath>-->
+        </template>
+    </data>
+</odoo>
+

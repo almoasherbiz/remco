@@ -1,0 +1,21 @@
+<odoo>
+
+    <record id="view_account_move_inherit_form" model="ir.ui.view">
+            <field name="name">view.account.move.inherit.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_post']" position="replace">
+                     <button name="action_post" string="Post" class="oe_highlight" type="object" groups="custom_journal_access.journal_entry_post_access" data-hotkey="v" attrs="{'invisible': ['|', '|', ('state', '!=', 'draft'), ('auto_post', '=', True), ('move_type', '!=', 'entry')]}"/>
+<!--                     <button name="action_post" states="draft" string="Post" type="object" class="oe_highlight" groups="custom_journal_access.journal_entry_post_access"/>-->
+                </xpath>
+
+                <xpath expr="//button[@name='%(account.action_view_account_move_reversal)d']" position="replace">
+                    <button name="%(account.action_view_account_move_reversal)d" string="Reverse Entry"
+                            type="action" groups="custom_journal_access.journal_entry_reserve_access" data-hotkey="z"
+                            attrs="{'invisible': ['|', ('move_type', '!=', 'entry'), '|', ('state', '!=', 'posted'), ('payment_state', '=', 'reversed')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>

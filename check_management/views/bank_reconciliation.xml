@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+         <record id="action_report_bank_reconciliation" model="ir.actions.report">
+            <field name="name">Bank Reconciliation</field>
+            <field name="model">account.bank.statement.line</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">check_management.report_bank_reconciliation</field>
+            <field name="report_file">check_management.report_bank_reconciliation</field>
+            <field name="binding_model_id" ref="account_accountant.model_account_bank_statement_line"/>
+            <field name="binding_type">report</field>
+        </record>
+<!--        <record id="view_bank_statement_line_tree_bank_reconciliation" model="ir.ui.view">-->
+<!--            <field name="name">view.bank.statement.line.tree.bank.reconciliation</field>-->
+<!--            <field name="model">account.bank.statement.line</field>-->
+<!--            <field name="inherit_id" ref="account_accountant.view_bank_statement_line_tree_bank_rec_widget"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="statement_id" position="after">-->
+<!--                        <button name="check_management.action_report_bank_reconciliation" type="action"-->
+<!--                           string="Print Bank Reconciliation" class="oe_link"-->
+<!--                           groups="account.group_account_invoice"-->
+<!--                           attrs="{'invisible': ['|', '|', ('is_reconciled', '=', False), ('statement_complete', '=', False)]}"/>-->
+<!--                </field>-->
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>
